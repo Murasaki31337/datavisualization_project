@@ -5,6 +5,7 @@ It demonstrates a full data pipeline: **data cleaning → database design → SQ
 
 ---
 
+
 ## 🚀 Project Overview
 
 We act as a fictional company **Esports Data Insights Inc.**, providing competitive analysis for Valorant tournaments.
@@ -52,7 +53,8 @@ valorant_tournament_data_analytics/
 ## 📊 Entity Relationship Diagram
 
 Database schema for cleaned Valorant dataset (10 tables).
-![ER Diagram](valorantdb_erd.pdf)
+![ER Diagram](ERD/valorantdb_erd-1.png)
+
 
 ---
 
