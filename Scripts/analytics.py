@@ -180,7 +180,7 @@ with pd.ExcelWriter(out_file, engine="openpyxl") as writer:
 
 
 
-from openpyxl.formatting.rule import FormulaRule
+from openpyxl.formatting.rule import FormulaRule, ColorScaleRule
 
 # Apply formatting
 wb = load_workbook(out_file)
@@ -189,16 +189,14 @@ for sheet in wb.sheetnames:
     ws.auto_filter.ref = ws.dimensions
     ws.freeze_panes = "A2"
     
-    # Only apply conditional formatting to RatingTimeline
-    if sheet == "RatingTimeline":
-        for col in ws.iter_cols(min_row=2):
-            # Apply only to numeric columns
-            if all(isinstance(cell.value, (int, float, type(None))) for cell in col):
-                col_letter = col[0].column_letter
-                start_row = col[1].row
-                end_row = col[-1].row
-                rng = f"{col_letter}{start_row}:{col_letter}{end_row}"
+    for col in ws.iter_cols(min_row=2):
+        if all(isinstance(cell.value, (int, float, type(None))) for cell in col):
+            col_letter = col[0].column_letter
+            start_row = col[1].row
+            end_row = col[-1].row
+            rng = f"{col_letter}{start_row}:{col_letter}{end_row}"
 
+            if sheet == "RatingTimeline":
                 # Above average → green
                 ws.conditional_formatting.add(
                     rng,
@@ -216,5 +214,18 @@ for sheet in wb.sheetnames:
                     )
                 )
 
+            elif sheet == "TeamWins":
+                # Gradient: low = light red, mid = white, high = light green
+                ws.conditional_formatting.add(
+                    rng,
+                    ColorScaleRule(
+                        start_type="min", start_color="FF9999",
+                        mid_type="percentile", mid_value=50, mid_color="FFFFFF",
+                        end_type="max", end_color="99FF99"
+                    )
+                )
+
+            # TopPlayers stays clean (no formatting)
+
 wb.save(out_file)
-print(f"✅ Excel report created with conditional formatting only in RatingTimeline: {out_file}, {len(export_data)} sheets.")
+print(f"✅ Excel report created with gradient in TeamWins and above/below avg in RatingTimeline: {out_file}, {len(export_data)} sheets.")
