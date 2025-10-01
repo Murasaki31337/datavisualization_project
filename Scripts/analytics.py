@@ -7,6 +7,7 @@ from dotenv import load_dotenv
 from openpyxl import load_workbook
 from openpyxl.styles import PatternFill
 from openpyxl.formatting.rule import CellIsRule
+from openpyxl.formatting.rule import FormulaRule
 
 load_dotenv()
 
@@ -177,21 +178,43 @@ with pd.ExcelWriter(out_file, engine="openpyxl") as writer:
     for sheet, df in export_data.items():
         df.to_excel(writer, sheet_name=sheet, index=False)
 
+
+
+from openpyxl.formatting.rule import FormulaRule
+
 # Apply formatting
 wb = load_workbook(out_file)
 for sheet in wb.sheetnames:
     ws = wb[sheet]
     ws.auto_filter.ref = ws.dimensions
     ws.freeze_panes = "A2"
-    for col in ws.iter_cols(min_row=2):
-        if all(isinstance(cell.value, (int, float, type(None))) for cell in col):
-            rng = f"{col[1].coordinate}:{col[-1].coordinate}"
-            ws.conditional_formatting.add(rng,
-                CellIsRule(operator="equal", formula=["MAX("+rng+")"], stopIfTrue=True,
-                           fill=PatternFill(start_color="FF9999", end_color="FF9999", fill_type="solid")))
-            ws.conditional_formatting.add(rng,
-                CellIsRule(operator="equal", formula=["MIN("+rng+")"], stopIfTrue=True,
-                           fill=PatternFill(start_color="99FF99", end_color="99FF99", fill_type="solid")))
+    
+    # Only apply conditional formatting to RatingTimeline
+    if sheet == "RatingTimeline":
+        for col in ws.iter_cols(min_row=2):
+            # Apply only to numeric columns
+            if all(isinstance(cell.value, (int, float, type(None))) for cell in col):
+                col_letter = col[0].column_letter
+                start_row = col[1].row
+                end_row = col[-1].row
+                rng = f"{col_letter}{start_row}:{col_letter}{end_row}"
+
+                # Above average → green
+                ws.conditional_formatting.add(
+                    rng,
+                    FormulaRule(
+                        formula=[f"{col_letter}{start_row}>AVERAGE({rng})"],
+                        fill=PatternFill(start_color="99FF99", end_color="99FF99", fill_type="solid")
+                    )
+                )
+                # Below average → red
+                ws.conditional_formatting.add(
+                    rng,
+                    FormulaRule(
+                        formula=[f"{col_letter}{start_row}<AVERAGE({rng})"],
+                        fill=PatternFill(start_color="FF9999", end_color="FF9999", fill_type="solid")
+                    )
+                )
 
 wb.save(out_file)
-print(f"✅ Excel report created: {out_file}, {len(export_data)} sheets.")
+print(f"✅ Excel report created with conditional formatting only in RatingTimeline: {out_file}, {len(export_data)} sheets.")
