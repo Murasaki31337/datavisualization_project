@@ -1,0 +1,78 @@
+slice_name: Team Wins Distribution Over All Matches
+description: null
+certified_by: null
+certification_details: null
+viz_type: pie
+params:
+  datasource: 43__table
+  viz_type: pie
+  matrixify_show_column_headers: true
+  matrixify_mode_columns: metrics
+  matrixify_dimension_selection_mode_columns: members
+  matrixify_dimension_columns:
+    dimension: ''
+    values: []
+  matrixify_topn_value_columns: 10
+  matrixify_topn_order_columns: desc
+  matrixify_show_row_labels: true
+  matrixify_mode_rows: metrics
+  matrixify_dimension_selection_mode_rows: members
+  matrixify_dimension_rows:
+    dimension: ''
+    values: []
+  matrixify_topn_value_rows: 10
+  matrixify_topn_order_rows: desc
+  matrixify_row_height: 300
+  matrixify_fit_columns_dynamically: true
+  matrixify_charts_per_row: 4
+  groupby:
+  - winner
+  metric:
+    expressionType: SIMPLE
+    column:
+      advanced_data_type: null
+      certification_details: null
+      certified_by: null
+      column_name: winner
+      description: null
+      expression: null
+      filterable: true
+      groupby: true
+      id: 1459
+      is_certified: false
+      is_dttm: false
+      python_date_format: null
+      type: TEXT
+      type_generic: 1
+      uuid: 2493d046-86c0-4ac4-a06f-87f4aa990cb3
+      verbose_name: null
+      warning_markdown: null
+    aggregate: COUNT
+    sqlExpression: null
+    datasourceWarning: false
+    hasCustomLabel: false
+    label: COUNT(winner)
+    optionName: metric_d534jwacy38_o2z7gzasqeg
+  adhoc_filters: []
+  row_limit: 100
+  sort_by_metric: true
+  color_scheme: supersetColors
+  show_labels_threshold: 5
+  show_legend: true
+  legendType: scroll
+  legendOrientation: top
+  label_type: key
+  number_format: SMART_NUMBER
+  date_format: smart_date
+  show_labels: true
+  labels_outside: true
+  label_line: true
+  outerRadius: 70
+  extra_form_data: {}
+  dashboards:
+  - 16
+query_context: '{"datasource":{"id":43,"type":"table"},"force":false,"queries":[{"filters":[],"extras":{"having":"","where":""},"applied_time_extras":{},"columns":["winner"],"metrics":[{"expressionType":"SIMPLE","column":{"advanced_data_type":null,"certification_details":null,"certified_by":null,"column_name":"winner","description":null,"expression":null,"filterable":true,"groupby":true,"id":1459,"is_certified":false,"is_dttm":false,"python_date_format":null,"type":"TEXT","type_generic":1,"uuid":"2493d046-86c0-4ac4-a06f-87f4aa990cb3","verbose_name":null,"warning_markdown":null},"aggregate":"COUNT","sqlExpression":null,"datasourceWarning":false,"hasCustomLabel":false,"label":"COUNT(winner)","optionName":"metric_d534jwacy38_o2z7gzasqeg"}],"orderby":[[{"expressionType":"SIMPLE","column":{"advanced_data_type":null,"certification_details":null,"certified_by":null,"column_name":"winner","description":null,"expression":null,"filterable":true,"groupby":true,"id":1459,"is_certified":false,"is_dttm":false,"python_date_format":null,"type":"TEXT","type_generic":1,"uuid":"2493d046-86c0-4ac4-a06f-87f4aa990cb3","verbose_name":null,"warning_markdown":null},"aggregate":"COUNT","sqlExpression":null,"datasourceWarning":false,"hasCustomLabel":false,"label":"COUNT(winner)","optionName":"metric_d534jwacy38_o2z7gzasqeg"},false]],"annotation_layers":[],"row_limit":100,"series_limit":0,"group_others_when_limit_reached":false,"order_desc":true,"url_params":{},"custom_params":{},"custom_form_data":{},"post_processing":[{"operation":"contribution","options":{"columns":["COUNT(winner)"],"rename_columns":["COUNT(winner)__contribution"]}}]}],"form_data":{"datasource":"43__table","viz_type":"pie","matrixify_show_column_headers":true,"matrixify_mode_columns":"metrics","matrixify_dimension_selection_mode_columns":"members","matrixify_dimension_columns":{"dimension":"","values":[]},"matrixify_topn_value_columns":10,"matrixify_topn_order_columns":"desc","matrixify_show_row_labels":true,"matrixify_mode_rows":"metrics","matrixify_dimension_selection_mode_rows":"members","matrixify_dimension_rows":{"dimension":"","values":[]},"matrixify_topn_value_rows":10,"matrixify_topn_order_rows":"desc","matrixify_row_height":300,"matrixify_fit_columns_dynamically":true,"matrixify_charts_per_row":4,"groupby":["winner"],"metric":{"expressionType":"SIMPLE","column":{"advanced_data_type":null,"certification_details":null,"certified_by":null,"column_name":"winner","description":null,"expression":null,"filterable":true,"groupby":true,"id":1459,"is_certified":false,"is_dttm":false,"python_date_format":null,"type":"TEXT","type_generic":1,"uuid":"2493d046-86c0-4ac4-a06f-87f4aa990cb3","verbose_name":null,"warning_markdown":null},"aggregate":"COUNT","sqlExpression":null,"datasourceWarning":false,"hasCustomLabel":false,"label":"COUNT(winner)","optionName":"metric_d534jwacy38_o2z7gzasqeg"},"adhoc_filters":[],"row_limit":100,"sort_by_metric":true,"color_scheme":"supersetColors","show_labels_threshold":5,"show_legend":true,"legendType":"scroll","legendOrientation":"top","label_type":"key","number_format":"SMART_NUMBER","date_format":"smart_date","show_labels":true,"labels_outside":true,"label_line":true,"outerRadius":70,"extra_form_data":{},"dashboards":[16],"force":false,"result_format":"json","result_type":"full"},"result_format":"json","result_type":"full"}'
+cache_timeout: null
+uuid: bfe22cb4-28b5-468b-9dd9-40982ff4ce9d
+version: 1.0.0
+dataset_uuid: 90927f94-1247-4417-9a22-ab24426b054a

@@ -1,0 +1,88 @@
+slice_name: "Map \xD7 Team Round Density"
+description: null
+certified_by: null
+certification_details: null
+viz_type: heatmap_v2
+params:
+  datasource: 54__table
+  viz_type: heatmap_v2
+  slice_id: 506
+  matrixify_show_column_headers: true
+  matrixify_mode_columns: metrics
+  matrixify_dimension_selection_mode_columns: members
+  matrixify_dimension_columns:
+    dimension: ''
+    values: []
+  matrixify_topn_value_columns: 10
+  matrixify_topn_order_columns: desc
+  matrixify_show_row_labels: true
+  matrixify_mode_rows: metrics
+  matrixify_dimension_selection_mode_rows: members
+  matrixify_dimension_rows:
+    dimension: ''
+    values: []
+  matrixify_topn_value_rows: 10
+  matrixify_topn_order_rows: desc
+  matrixify_row_height: 300
+  matrixify_fit_columns_dynamically: true
+  matrixify_charts_per_row: 4
+  x_axis: map_name
+  groupby: player_team
+  metric:
+    aggregate: SUM
+    column:
+      advanced_data_type: null
+      certification_details: null
+      certified_by: null
+      column_name: rounds
+      description: null
+      expression: null
+      filterable: true
+      groupby: true
+      id: 1907
+      is_certified: false
+      is_dttm: false
+      python_date_format: null
+      type: LONGINTEGER
+      type_generic: 0
+      uuid: 4b465e9c-4474-4858-9604-e911dfbe1bd9
+      verbose_name: null
+      warning_markdown: null
+    datasourceWarning: false
+    expressionType: SIMPLE
+    hasCustomLabel: false
+    label: SUM(rounds)
+    optionName: metric_c8bwzkf7yxa_72unkqrw0vl
+    sqlExpression: null
+  adhoc_filters: []
+  row_limit: 1000
+  normalize_across: heatmap
+  legend_type: continuous
+  linear_color_scheme: preset_seq_1
+  border_color:
+    a: 1
+    b: 0
+    g: 0
+    r: 0
+  border_width: 0
+  xscale_interval: -1
+  yscale_interval: -1
+  left_margin: auto
+  bottom_margin: auto
+  value_bounds:
+  - null
+  - null
+  y_axis_format: SMART_NUMBER
+  x_axis_time_format: smart_date
+  xAxisLabelRotation: 45
+  show_legend: true
+  show_percentage: true
+  normalized: true
+  extra_form_data: {}
+  dashboards:
+  - 16
+query_context: '{"datasource":{"id":54,"type":"table"},"force":false,"queries":[{"filters":[],"extras":{"having":"","where":""},"applied_time_extras":{},"columns":[{"columnType":"BASE_AXIS","sqlExpression":"map_name","label":"map_name","expressionType":"SQL"},"player_team"],"metrics":[{"aggregate":"SUM","column":{"advanced_data_type":null,"certification_details":null,"certified_by":null,"column_name":"rounds","description":null,"expression":null,"filterable":true,"groupby":true,"id":1907,"is_certified":false,"is_dttm":false,"python_date_format":null,"type":"LONGINTEGER","type_generic":0,"uuid":"4b465e9c-4474-4858-9604-e911dfbe1bd9","verbose_name":null,"warning_markdown":null},"datasourceWarning":false,"expressionType":"SIMPLE","hasCustomLabel":false,"label":"SUM(rounds)","optionName":"metric_c8bwzkf7yxa_72unkqrw0vl","sqlExpression":null}],"orderby":[],"annotation_layers":[],"row_limit":1000,"series_limit":0,"group_others_when_limit_reached":false,"order_desc":true,"url_params":{},"custom_params":{},"custom_form_data":{},"post_processing":[{"operation":"rank","options":{"metric":"SUM(rounds)"}}]}],"form_data":{"datasource":"54__table","viz_type":"heatmap_v2","slice_id":506,"matrixify_show_column_headers":true,"matrixify_mode_columns":"metrics","matrixify_dimension_selection_mode_columns":"members","matrixify_dimension_columns":{"dimension":"","values":[]},"matrixify_topn_value_columns":10,"matrixify_topn_order_columns":"desc","matrixify_show_row_labels":true,"matrixify_mode_rows":"metrics","matrixify_dimension_selection_mode_rows":"members","matrixify_dimension_rows":{"dimension":"","values":[]},"matrixify_topn_value_rows":10,"matrixify_topn_order_rows":"desc","matrixify_row_height":300,"matrixify_fit_columns_dynamically":true,"matrixify_charts_per_row":4,"x_axis":"map_name","groupby":"player_team","metric":{"aggregate":"SUM","column":{"advanced_data_type":null,"certification_details":null,"certified_by":null,"column_name":"rounds","description":null,"expression":null,"filterable":true,"groupby":true,"id":1907,"is_certified":false,"is_dttm":false,"python_date_format":null,"type":"LONGINTEGER","type_generic":0,"uuid":"4b465e9c-4474-4858-9604-e911dfbe1bd9","verbose_name":null,"warning_markdown":null},"datasourceWarning":false,"expressionType":"SIMPLE","hasCustomLabel":false,"label":"SUM(rounds)","optionName":"metric_c8bwzkf7yxa_72unkqrw0vl","sqlExpression":null},"adhoc_filters":[],"row_limit":1000,"normalize_across":"heatmap","legend_type":"continuous","linear_color_scheme":"preset_seq_1","border_color":{"a":1,"b":0,"g":0,"r":0},"border_width":0,"xscale_interval":-1,"yscale_interval":-1,"left_margin":"auto","bottom_margin":"auto","value_bounds":[null,null],"y_axis_format":"SMART_NUMBER","x_axis_time_format":"smart_date","xAxisLabelRotation":45,"show_legend":true,"show_percentage":true,"normalized":true,"extra_form_data":{},"dashboards":[16],"force":false,"result_format":"json","result_type":"full"},"result_format":"json","result_type":"full"}'
+cache_timeout: null
+uuid: 17f94a4e-28e3-4889-a757-bb8c65f00ec7
+version: 1.0.0
+dataset_uuid: 7e516e4f-3849-4ade-90a6-aa533a3d743e

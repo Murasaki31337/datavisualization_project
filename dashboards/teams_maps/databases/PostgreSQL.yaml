@@ -1,0 +1,14 @@
+database_name: PostgreSQL
+sqlalchemy_uri: postgresql+psycopg2://postgres:XXXXXXXXXX@host.docker.internal:5432/valorant_tournament
+cache_timeout: null
+expose_in_sqllab: true
+allow_run_async: false
+allow_ctas: false
+allow_cvas: false
+allow_dml: false
+allow_file_upload: true
+extra:
+  allows_virtual_table_explore: true
+impersonate_user: false
+uuid: aa3ed409-d0de-42c0-bb5f-3b0012931b3b
+version: 1.0.0

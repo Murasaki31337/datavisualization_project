@@ -1,0 +1,112 @@
+table_name: norm
+main_dttm_col: null
+description: null
+default_endpoint: null
+offset: 0
+cache_timeout: null
+catalog: valorant_tournament
+schema: public
+sql: "SELECT\r\n    map_name,\r\n    times_played,\r\n    attack_win_percent,\r\n\
+  \    defense_win_percent,\r\n\r\n    -- \u2705 Normalized attack win % (Task 13,\
+  \ fixed)\r\n    ROUND(\r\n        ((attack_win_percent - MIN(attack_win_percent)\
+  \ OVER ()) \r\n         / NULLIF(MAX(attack_win_percent) OVER () - MIN(attack_win_percent)\
+  \ OVER (), 0))::numeric,\r\n    3) AS attack_win_norm,\r\n\r\n    -- \u2705 Categorization\
+  \ (Task 14)\r\n    CASE\r\n        WHEN attack_win_percent < 0.49 THEN 'Low'\r\n\
+  \        WHEN attack_win_percent BETWEEN 0.49 AND 0.52 THEN 'Medium'\r\n       \
+  \ WHEN attack_win_percent > 0.52 THEN 'High'\r\n        ELSE 'Unknown'\r\n    END\
+  \ AS attack_win_category\r\n\r\nFROM maps_stats\r\nWHERE attack_win_percent IS NOT\
+  \ NULL\r\nORDER BY attack_win_percent DESC;\r\n"
+params: null
+template_params: null
+filter_select_enabled: true
+fetch_values_predicate: null
+extra: null
+normalize_columns: false
+always_filter_main_dttm: false
+folders: null
+uuid: c537d72f-5901-4bac-8aa8-0e3bb0b49e9b
+metrics:
+- metric_name: count
+  verbose_name: COUNT(*)
+  metric_type: count
+  expression: COUNT(*)
+  description: null
+  d3format: null
+  currency: null
+  extra: null
+  warning_text: null
+columns:
+- column_name: attack_win_norm
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: DECIMAL
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: attack_win_percent
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: FLOAT
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: defense_win_percent
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: FLOAT
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: times_played
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: INTEGER
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: attack_win_category
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: STRING
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: map_name
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: STRING
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+version: 1.0.0
+database_uuid: aa3ed409-d0de-42c0-bb5f-3b0012931b3b

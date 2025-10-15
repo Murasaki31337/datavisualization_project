@@ -1,0 +1,82 @@
+table_name: agent_usage_team_map
+main_dttm_col: null
+description: null
+default_endpoint: null
+offset: 0
+cache_timeout: null
+catalog: valorant_tournament
+schema: public
+sql: "SELECT\r\n    agent_name,\r\n    key AS map_name,\r\n    value::numeric AS utilization,\r\
+  \n    ROUND( ((value::numeric / NULLIF(total_utilization, 0)) * 100)::numeric, 2\
+  \ ) AS percent_of_total\r\nFROM agents_stats,\r\n     jsonb_each_text(map_utilizations)\r\
+  \nWHERE value::numeric > 0\r\nORDER BY map_name, percent_of_total DESC;\r\n"
+params: null
+template_params: null
+filter_select_enabled: true
+fetch_values_predicate: null
+extra: null
+normalize_columns: false
+always_filter_main_dttm: false
+folders: null
+uuid: 4e4951b4-d674-4bac-815e-c41ec266c144
+metrics:
+- metric_name: count
+  verbose_name: COUNT(*)
+  metric_type: count
+  expression: COUNT(*)
+  description: null
+  d3format: null
+  currency: null
+  extra: null
+  warning_text: null
+columns:
+- column_name: percent_of_total
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: DECIMAL
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: utilization
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: DECIMAL
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: agent_name
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: STRING
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: map_name
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: STRING
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+version: 1.0.0
+database_uuid: aa3ed409-d0de-42c0-bb5f-3b0012931b3b

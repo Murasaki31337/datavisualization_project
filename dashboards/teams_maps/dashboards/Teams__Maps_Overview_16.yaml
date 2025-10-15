@@ -1,0 +1,565 @@
+dashboard_title: Teams & Maps Overview
+description: null
+css: ''
+slug: null
+certified_by: ''
+certification_details: ''
+published: false
+uuid: cdd2afd2-d80d-44ca-b996-3bda61ca040c
+position:
+  CHART-explore-388-1:
+    children: []
+    id: CHART-explore-388-1
+    meta:
+      chartId: 388
+      height: 65
+      sliceName: Live Team ACS Over Time
+      uuid: 0122dd8c-46ea-4cf1-a9d8-97b1fc06e0bd
+      width: 12
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-VZXiPf2tqzfVOkCxJ-mph
+    type: CHART
+  CHART-explore-503-1:
+    children: []
+    id: CHART-explore-503-1
+    meta:
+      chartId: 503
+      height: 50
+      sliceName: Team Wins Distribution Over All Matches
+      uuid: bfe22cb4-28b5-468b-9dd9-40982ff4ce9d
+      width: 6
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-qNWRGSViuFekfvvdl8vp0
+    type: CHART
+  CHART-explore-504-1:
+    children: []
+    id: CHART-explore-504-1
+    meta:
+      chartId: 504
+      height: 50
+      sliceName: Average ACS per Team
+      uuid: 3ebfb10a-14d0-418a-a53d-48071b7ffe38
+      width: 6
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-qNWRGSViuFekfvvdl8vp0
+    type: CHART
+  CHART-explore-505-1:
+    children: []
+    id: CHART-explore-505-1
+    meta:
+      chartId: 505
+      height: 65
+      sliceName: Map Popularity
+      uuid: 7a25e531-ff01-4eaa-9300-691836ac0e6f
+      width: 4
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-SA1Td9RN2tIc976StZdTy
+    type: CHART
+  CHART-explore-506-1:
+    children: []
+    id: CHART-explore-506-1
+    meta:
+      chartId: 506
+      height: 65
+      sliceName: "Map \xD7 Team Round Density"
+      uuid: 17f94a4e-28e3-4889-a757-bb8c65f00ec7
+      width: 8
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-SA1Td9RN2tIc976StZdTy
+    type: CHART
+  CHART-explore-666-1:
+    children: []
+    id: CHART-explore-666-1
+    meta:
+      chartId: 666
+      height: 50
+      sliceName: Map Geo Visualization
+      uuid: b3bf5f4b-50b2-4207-bd06-1bbf6af669b6
+      width: 12
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-rzIyLaBsCeHSd89MCufj5
+    type: CHART
+  CHART-explore-667-1:
+    children: []
+    id: CHART-explore-667-1
+    meta:
+      chartId: 667
+      height: 50
+      sliceName: Stream Comparison
+      uuid: 01cdaf8f-cbe7-413e-8b67-7908bcfd858d
+      width: 12
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-eHHpIv3czBCRWsEbTlPLT
+    type: CHART
+  CHART-explore-706-1:
+    children: []
+    id: CHART-explore-706-1
+    meta:
+      chartId: 706
+      height: 50
+      sliceName: Median vs Average ACS
+      uuid: 7704328a-a508-497d-aaff-1d6820b9df60
+      width: 12
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-mCrta9kVPNFoK5T47f5dY
+    type: CHART
+  DASHBOARD_VERSION_KEY: v2
+  GRID_ID:
+    children:
+    - HEADER-p8mATvfZ8ZGLcaExvEMdP
+    - ROW-SA1Td9RN2tIc976StZdTy
+    - ROW-rzIyLaBsCeHSd89MCufj5
+    - HEADER-ljPFPYGHTGR8maqmdCNc6
+    - ROW-qNWRGSViuFekfvvdl8vp0
+    - ROW-VZXiPf2tqzfVOkCxJ-mph
+    - ROW-eHHpIv3czBCRWsEbTlPLT
+    - ROW-mCrta9kVPNFoK5T47f5dY
+    - ROW-N-VIV7DXQF
+    id: GRID_ID
+    parents:
+    - ROOT_ID
+    type: GRID
+  HEADER-ljPFPYGHTGR8maqmdCNc6:
+    children: []
+    id: HEADER-ljPFPYGHTGR8maqmdCNc6
+    meta:
+      background: BACKGROUND_TRANSPARENT
+      headerSize: MEDIUM_HEADER
+      text: Team Performance
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    type: HEADER
+  HEADER-p8mATvfZ8ZGLcaExvEMdP:
+    children: []
+    id: HEADER-p8mATvfZ8ZGLcaExvEMdP
+    meta:
+      background: BACKGROUND_TRANSPARENT
+      headerSize: MEDIUM_HEADER
+      text: Maps Overview
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    type: HEADER
+  HEADER_ID:
+    id: HEADER_ID
+    meta:
+      text: Teams & Maps Overview
+    type: HEADER
+  ROOT_ID:
+    children:
+    - GRID_ID
+    id: ROOT_ID
+    type: ROOT
+  ROW-SA1Td9RN2tIc976StZdTy:
+    children:
+    - CHART-explore-505-1
+    - CHART-explore-506-1
+    id: ROW-SA1Td9RN2tIc976StZdTy
+    meta:
+      '0': ROOT_ID
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    type: ROW
+  ROW-VZXiPf2tqzfVOkCxJ-mph:
+    children:
+    - CHART-explore-388-1
+    id: ROW-VZXiPf2tqzfVOkCxJ-mph
+    meta:
+      '0': ROOT_ID
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    type: ROW
+  ROW-eHHpIv3czBCRWsEbTlPLT:
+    children:
+    - CHART-explore-667-1
+    id: ROW-eHHpIv3czBCRWsEbTlPLT
+    meta:
+      '0': ROOT_ID
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    type: ROW
+  ROW-mCrta9kVPNFoK5T47f5dY:
+    children:
+    - CHART-explore-706-1
+    id: ROW-mCrta9kVPNFoK5T47f5dY
+    meta:
+      '0': ROOT_ID
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    type: ROW
+  ROW-qNWRGSViuFekfvvdl8vp0:
+    children:
+    - CHART-explore-503-1
+    - CHART-explore-504-1
+    id: ROW-qNWRGSViuFekfvvdl8vp0
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    type: ROW
+  ROW-rzIyLaBsCeHSd89MCufj5:
+    children:
+    - CHART-explore-666-1
+    id: ROW-rzIyLaBsCeHSd89MCufj5
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    type: ROW
+  ROW-N-VIV7DXQF:
+    children:
+    - CHART-STPYMWV5
+    id: ROW-N-VIV7DXQF
+    meta:
+      '0': ROOT_ID
+      background: BACKGROUND_TRANSPARENT
+    type: ROW
+    parents:
+    - ROOT_ID
+    - GRID_ID
+  CHART-STPYMWV5:
+    children: []
+    id: CHART-STPYMWV5
+    meta:
+      chartId: 707
+      height: 50
+      sliceName: Normalized ACS of Teams
+      uuid: 4bad4210-8682-4c77-a25d-2078e3c35c57
+      width: 4
+    type: CHART
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-N-VIV7DXQF
+metadata:
+  label_colors: {}
+  refresh_frequency: 0
+  timed_refresh_immune_slices: []
+  expanded_slices: {}
+  color_scheme: ''
+  cross_filters_enabled: true
+  chart_configuration:
+    '388':
+      id: 388
+      crossFilters:
+        scope: global
+        chartsInScope:
+        - 503
+        - 504
+        - 505
+        - 506
+        - 666
+        - 667
+        - 706
+    '503':
+      id: 503
+      crossFilters:
+        scope: global
+        chartsInScope:
+        - 388
+        - 504
+        - 505
+        - 506
+        - 666
+        - 667
+        - 706
+    '504':
+      id: 504
+      crossFilters:
+        scope: global
+        chartsInScope:
+        - 388
+        - 503
+        - 505
+        - 506
+        - 666
+        - 667
+        - 706
+    '505':
+      id: 505
+      crossFilters:
+        scope: global
+        chartsInScope:
+        - 388
+        - 503
+        - 504
+        - 506
+        - 666
+        - 667
+        - 706
+    '666':
+      id: 666
+      crossFilters:
+        scope: global
+        chartsInScope:
+        - 388
+        - 503
+        - 504
+        - 505
+        - 506
+        - 667
+        - 706
+    '667':
+      id: 667
+      crossFilters:
+        scope: global
+        chartsInScope:
+        - 388
+        - 503
+        - 504
+        - 505
+        - 506
+        - 666
+        - 706
+    '706':
+      id: 706
+      crossFilters:
+        scope: global
+        chartsInScope:
+        - 388
+        - 503
+        - 504
+        - 505
+        - 506
+        - 666
+        - 667
+  global_chart_configuration:
+    scope:
+      rootPath:
+      - ROOT_ID
+      excluded: []
+    chartsInScope:
+    - 388
+    - 503
+    - 504
+    - 505
+    - 506
+    - 666
+    - 667
+    - 706
+  stagger_refresh: true
+  default_filters: '{}'
+  native_filter_configuration:
+  - id: NATIVE_FILTER-oSHGj_zJ7PpE8MQHEWJsY
+    controlValues:
+      sortAscending: true
+      enableEmptyFilter: false
+      defaultToFirstItem: true
+      creatable: true
+      multiSelect: true
+      searchAllOptions: false
+      inverseSelection: false
+    requiredFirst:
+      nativeEvent:
+        isTrusted: true
+      target:
+        checked: true
+        className: ant-wave-target css-1ukmngn
+        disabled: false
+        id: filters_NATIVE_FILTER-oSHGj_zJ7PpE8MQHEWJsY_controlValues_defaultToFirstItem
+        prefixCls: ant-checkbox
+        type: checkbox
+    name: Tea
+    filterType: filter_select
+    targets:
+    - column:
+        name: team
+      datasetUuid: cd3bbc25-f52a-48a0-b592-964529519d07
+    defaultDataMask:
+      extraFormData: {}
+      filterState: {}
+      ownState: {}
+    cascadeParentIds: []
+    scope:
+      excluded: []
+      rootPath:
+      - ROOT_ID
+    type: NATIVE_FILTER
+    description: ''
+    chartsInScope:
+    - 388
+    - 503
+    - 504
+    - 505
+    - 506
+    - 666
+    - 667
+    tabsInScope: []
+  - id: NATIVE_FILTER-unxYClzjOzNlywWGs8rNJ
+    controlValues:
+      sortAscending: true
+      enableEmptyFilter: false
+      defaultToFirstItem: true
+      creatable: true
+      multiSelect: true
+      searchAllOptions: false
+      inverseSelection: false
+    requiredFirst:
+      nativeEvent:
+        isTrusted: true
+      target:
+        checked: true
+        className: ant-wave-target css-1ukmngn
+        disabled: false
+        id: filters_NATIVE_FILTER-unxYClzjOzNlywWGs8rNJ_controlValues_defaultToFirstItem
+        prefixCls: ant-checkbox
+        type: checkbox
+    name: Map
+    filterType: filter_select
+    targets:
+    - column:
+        name: map_name
+      datasetUuid: f6c445b7-c538-4311-9e2c-2039904ad56c
+    defaultDataMask:
+      extraFormData: {}
+      filterState: {}
+      ownState: {}
+    cascadeParentIds: []
+    scope:
+      rootPath:
+      - ROOT_ID
+      excluded:
+      - 504
+    type: NATIVE_FILTER
+    description: Controls map-level charts
+    chartsInScope:
+    - 388
+    - 503
+    - 505
+    - 506
+    - 666
+    - 667
+    tabsInScope: []
+  - id: NATIVE_FILTER-noAW5CQYj8jvbbaH8EIQg
+    controlValues:
+      enableEmptyFilter: false
+      defaultToFirstItem: true
+      creatable: true
+      multiSelect: true
+      searchAllOptions: false
+      inverseSelection: false
+      sortAscending: true
+    requiredFirst:
+      target:
+        checked: true
+        id: filters_NATIVE_FILTER-noAW5CQYj8jvbbaH8EIQg_controlValues_defaultToFirstItem
+        prefixCls: ant-checkbox
+        className: ant-wave-target css-1ukmngn
+        disabled: false
+        type: checkbox
+      nativeEvent:
+        isTrusted: true
+    name: Agent
+    filterType: filter_select
+    targets:
+    - column:
+        name: agent_name
+      datasetUuid: 487665b5-3f2d-4e84-8b9b-bde4fad19aab
+    defaultDataMask:
+      extraFormData: {}
+      filterState: {}
+      ownState: {}
+    cascadeParentIds: []
+    scope:
+      rootPath:
+      - ROOT_ID
+      excluded: []
+    type: NATIVE_FILTER
+    description: ''
+    chartsInScope:
+    - 388
+    - 503
+    - 504
+    - 505
+    - 506
+    - 666
+    - 667
+    tabsInScope: []
+  - id: NATIVE_FILTER-AQCbTJZihtEAzSzBSqtA0
+    controlValues:
+      enableEmptyFilter: false
+    name: Date
+    filterType: filter_time
+    targets:
+    - {}
+    defaultDataMask:
+      extraFormData: {}
+      filterState: {}
+      ownState: {}
+    cascadeParentIds: []
+    scope:
+      rootPath:
+      - ROOT_ID
+      excluded:
+      - 503
+      - 504
+      - 505
+      - 506
+      - 666
+    type: NATIVE_FILTER
+    description: ''
+    chartsInScope:
+    - 388
+    - 667
+    tabsInScope: []
+  color_scheme_domain: []
+  shared_label_colors:
+  - DRX
+  - EDward Gaming
+  - FNATIC
+  - G2 Esports
+  - Gen.G
+  - "KR\xDC Esports"
+  - "LEVIAT\xC1N"
+  - Paper Rex
+  - Sentinels
+  - Team Heretics
+  - Team Vitality
+  - Trace Esports
+  map_label_colors:
+    Abyss: '#5BCACE'
+    EDward Gaming: '#1FA8C9'
+    Team Heretics: '#454E7C'
+    "LEVIAT\xC1N": '#5AC189'
+    Sentinels: '#FF7F44'
+    FNATIC: '#666666'
+    DRX: '#E04355'
+    G2 Esports: '#FCC700'
+    Trace Esports: '#A868B7'
+    Paper Rex: '#3CCCCB'
+    Team Vitality: '#A38F79'
+    "KR\xDC Esports": '#8FD3E4'
+    Gen.G: '#A1A6BD'
+    COUNT(map_name): '#004960'
+    Bilibili Gaming: '#1FA8C9'
+    Database (Live): '#454E7C'
+    CSV Snapshot: '#1FA8C9'
+theme_uuid: null
+version: 1.0.0

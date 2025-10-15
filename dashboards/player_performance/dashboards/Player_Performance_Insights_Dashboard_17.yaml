@@ -1,0 +1,406 @@
+dashboard_title: Player Performance Insights Dashboard
+description: null
+css: ''
+slug: null
+certified_by: ''
+certification_details: ''
+published: false
+uuid: 51f6157d-835f-4c9b-a69a-810c40b910ce
+position:
+  CHART-explore-507-1:
+    children: []
+    id: CHART-explore-507-1
+    meta:
+      chartId: 507
+      height: 50
+      sliceName: Top Players by Kills
+      uuid: 44fdb253-2896-4961-9060-5dfeb90ce1b6
+      width: 5
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-sXiMb3aWYHeT4bLDVRGsV
+    type: CHART
+  CHART-explore-508-1:
+    children: []
+    id: CHART-explore-508-1
+    meta:
+      chartId: 508
+      height: 50
+      sliceName: Average ADR per Map
+      uuid: 1c56e50d-c839-44c2-88b1-7aac2d5e4729
+      width: 3
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-sXiMb3aWYHeT4bLDVRGsV
+    type: CHART
+  CHART-explore-509-1:
+    children: []
+    id: CHART-explore-509-1
+    meta:
+      chartId: 509
+      height: 50
+      sliceName: ACS vs ADR Correlation
+      uuid: 1140b7a5-db11-4341-a39d-f2b0046ee119
+      width: 4
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-sXiMb3aWYHeT4bLDVRGsV
+    type: CHART
+  CHART-explore-510-1:
+    children: []
+    id: CHART-explore-510-1
+    meta:
+      chartId: 510
+      height: 65
+      sliceName: Agent Usage by Map
+      uuid: 1754f455-7e44-4223-b825-74896e02b6c7
+      width: 5
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-tB9qhW0rOUnfgj7H6wgQQ
+    type: CHART
+  CHART-explore-550-1:
+    children: []
+    id: CHART-explore-550-1
+    meta:
+      chartId: 550
+      height: 64
+      sliceName: Kills by Team and Map
+      uuid: ce98095c-a7cb-4742-97b1-1224dcc0b086
+      width: 7
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-tB9qhW0rOUnfgj7H6wgQQ
+    type: CHART
+  CHART-explore-551-1:
+    children: []
+    id: CHART-explore-551-1
+    meta:
+      chartId: 551
+      height: 65
+      sliceName: Most Picked Agents
+      uuid: 7ca0c330-15ba-44f1-a867-b38a23910697
+      width: 5
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-G0GSRTXo-veYDqYEmVB1R
+    type: CHART
+  CHART-explore-746-1:
+    children: []
+    id: CHART-explore-746-1
+    meta:
+      chartId: 746
+      height: 66
+      sliceName: Distribution of Player Ratings (by Map)
+      uuid: fabe33ef-9909-4c84-be97-5a51984aa402
+      width: 7
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-G0GSRTXo-veYDqYEmVB1R
+    type: CHART
+  CHART-explore-748-1:
+    children: []
+    id: CHART-explore-748-1
+    meta:
+      chartId: 748
+      height: 50
+      sliceName: Win Rate By Maps
+      uuid: b9f319ae-a02d-4d12-8035-10a02f56bf30
+      width: 12
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-JQb61YLcyzJfYczZ9tP84
+    type: CHART
+  DASHBOARD_VERSION_KEY: v2
+  GRID_ID:
+    children:
+    - HEADER-0CwiofFVaeIkJpK84avjU
+    - ROW-sXiMb3aWYHeT4bLDVRGsV
+    - HEADER--x0PyeAaOKLo6SVvpaw93
+    - ROW-tB9qhW0rOUnfgj7H6wgQQ
+    - ROW-G0GSRTXo-veYDqYEmVB1R
+    - ROW-JQb61YLcyzJfYczZ9tP84
+    id: GRID_ID
+    parents:
+    - ROOT_ID
+    type: GRID
+  HEADER--x0PyeAaOKLo6SVvpaw93:
+    children: []
+    id: HEADER--x0PyeAaOKLo6SVvpaw93
+    meta:
+      background: BACKGROUND_TRANSPARENT
+      headerSize: MEDIUM_HEADER
+      text: Map Information
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    type: HEADER
+  HEADER-0CwiofFVaeIkJpK84avjU:
+    children: []
+    id: HEADER-0CwiofFVaeIkJpK84avjU
+    meta:
+      background: BACKGROUND_TRANSPARENT
+      headerSize: MEDIUM_HEADER
+      text: Player Performance
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    type: HEADER
+  HEADER_ID:
+    id: HEADER_ID
+    meta:
+      text: Player Performance Insights Dashboard
+    type: HEADER
+  ROOT_ID:
+    children:
+    - GRID_ID
+    id: ROOT_ID
+    type: ROOT
+  ROW-G0GSRTXo-veYDqYEmVB1R:
+    children:
+    - CHART-explore-551-1
+    - CHART-explore-746-1
+    id: ROW-G0GSRTXo-veYDqYEmVB1R
+    meta:
+      '0': ROOT_ID
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    type: ROW
+  ROW-JQb61YLcyzJfYczZ9tP84:
+    children:
+    - CHART-explore-748-1
+    id: ROW-JQb61YLcyzJfYczZ9tP84
+    meta:
+      '0': ROOT_ID
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    type: ROW
+  ROW-sXiMb3aWYHeT4bLDVRGsV:
+    children:
+    - CHART-explore-507-1
+    - CHART-explore-508-1
+    - CHART-explore-509-1
+    id: ROW-sXiMb3aWYHeT4bLDVRGsV
+    meta:
+      '0': ROOT_ID
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    type: ROW
+  ROW-tB9qhW0rOUnfgj7H6wgQQ:
+    children:
+    - CHART-explore-510-1
+    - CHART-explore-550-1
+    id: ROW-tB9qhW0rOUnfgj7H6wgQQ
+    meta:
+      '0': ROOT_ID
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    type: ROW
+metadata:
+  chart_configuration:
+    '507':
+      id: 507
+      crossFilters:
+        scope: global
+        chartsInScope:
+        - 508
+        - 509
+        - 510
+        - 550
+        - 551
+        - 746
+        - 748
+    '508':
+      id: 508
+      crossFilters:
+        scope: global
+        chartsInScope:
+        - 507
+        - 509
+        - 510
+        - 550
+        - 551
+        - 746
+        - 748
+    '509':
+      id: 509
+      crossFilters:
+        scope: global
+        chartsInScope:
+        - 507
+        - 508
+        - 510
+        - 550
+        - 551
+        - 746
+        - 748
+    '510':
+      id: 510
+      crossFilters:
+        scope: global
+        chartsInScope:
+        - 507
+        - 508
+        - 509
+        - 550
+        - 551
+        - 746
+        - 748
+    '550':
+      id: 550
+      crossFilters:
+        scope: global
+        chartsInScope:
+        - 507
+        - 508
+        - 509
+        - 510
+        - 551
+        - 746
+        - 748
+    '748':
+      id: 748
+      crossFilters:
+        scope: global
+        chartsInScope:
+        - 507
+        - 508
+        - 509
+        - 510
+        - 550
+        - 551
+        - 746
+  global_chart_configuration:
+    scope:
+      rootPath:
+      - ROOT_ID
+      excluded: []
+    chartsInScope:
+    - 507
+    - 508
+    - 509
+    - 510
+    - 550
+    - 551
+    - 746
+    - 748
+  color_scheme: supersetAndPresetColors
+  refresh_frequency: 0
+  expanded_slices: {}
+  label_colors: {}
+  timed_refresh_immune_slices: []
+  cross_filters_enabled: true
+  default_filters: '{}'
+  color_scheme_domain:
+  - '#004960'
+  - '#2893B3'
+  - '#20A7C9'
+  - '#5CC0DA'
+  - '#7DCDE1'
+  - '#A9D3E1'
+  - '#C6ECE1'
+  - '#AAE2D2'
+  - '#71CFB4'
+  - '#2FC096'
+  - '#178F7A'
+  - '#067162'
+  shared_label_colors:
+  - DRX
+  - EDward Gaming
+  - FNATIC
+  - FUT Esports
+  - FunPlus Phoenix
+  - G2 Esports
+  - Gen.G
+  - "KR\xDC Esports"
+  - "LEVIAT\xC1N"
+  - Paper Rex
+  - Sentinels
+  - Team Heretics
+  - Team Vitality
+  - Trace Esports
+  map_label_colors:
+    SUM(kills), S1Mon: '#004960'
+    SUM(kills), Wo0t: '#2893B3'
+    SUM(kills), Boo: '#20A7C9'
+    SUM(kills), Smoggy: '#5CC0DA'
+    SUM(kills), Sacy: '#7DCDE1'
+    SUM(kills), RieNs: '#A9D3E1'
+    SUM(kills), TenZ: '#C6ECE1'
+    SUM(kills), Zellsis: '#AAE2D2'
+    SUM(kills), kiNgg: '#71CFB4'
+    SUM(kills), Mazino: '#2FC096'
+    AVG(adr), RieNs: '#178F7A'
+    AVG(adr), TenZ: '#067162'
+    AVG(adr), Smoggy: '#2893B3'
+    AVG(adr), Sacy: '#20A7C9'
+    AVG(adr), Mazino: '#5CC0DA'
+    AVG(adr), Wo0t: '#7DCDE1'
+    AVG(adr), kiNgg: '#A9D3E1'
+    AVG(adr), Boo: '#C6ECE1'
+    AVG(adr), Zellsis: '#AAE2D2'
+    AVG(adr), S1Mon: '#71CFB4'
+    AVG(avg_adr): '#004960'
+    EDward Gaming: '#004960'
+    Team Heretics: '#2893B3'
+    Sentinels: '#20A7C9'
+    "LEVIAT\xC1N": '#5CC0DA'
+    FNATIC: '#7DCDE1'
+    DRX: '#A9D3E1'
+    Trace Esports: '#C6ECE1'
+    G2 Esports: '#AAE2D2'
+    Team Vitality: '#71CFB4'
+    "KR\xDC Esports": '#2FC096'
+    Gen.G: '#178F7A'
+    Paper Rex: '#067162'
+    FunPlus Phoenix: '#2893B3'
+    FUT Esports: '#20A7C9'
+    Bilibili Gaming: '#5CC0DA'
+    TALON: '#7DCDE1'
+    SUM(total_kills): '#004960'
+    Icebox: '#2893B3'
+    Haven: '#20A7C9'
+    Bind: '#5CC0DA'
+    Sunset: '#7DCDE1'
+    Lotus: '#A9D3E1'
+    Abyss: '#C6ECE1'
+    Ascent: '#AAE2D2'
+    Omen: '#004960'
+    Sova: '#2893B3'
+    Viper: '#20A7C9'
+    Cypher: '#5CC0DA'
+    Raze: '#7DCDE1'
+    Fade: '#A9D3E1'
+    Killjoy: '#C6ECE1'
+    Jett: '#AAE2D2'
+    Gekko: '#71CFB4'
+    Breach: '#2FC096'
+    Neon: '#178F7A'
+    Kayo: '#067162'
+    Brimstone: '#2893B3'
+    Astra: '#20A7C9'
+    Skye: '#5CC0DA'
+    Yoru: '#7DCDE1'
+    Harbor: '#A9D3E1'
+    Deadlock: '#C6ECE1'
+    Clove: '#AAE2D2'
+    Sage: '#71CFB4'
+    rating: '#004960'
+theme_uuid: null
+version: 1.0.0

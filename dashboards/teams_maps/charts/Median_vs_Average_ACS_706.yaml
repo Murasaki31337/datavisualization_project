@@ -1,0 +1,75 @@
+slice_name: Median vs Average ACS
+description: null
+certified_by: null
+certification_details: null
+viz_type: table
+params:
+  datasource: 88__table
+  viz_type: table
+  slice_id: 706
+  matrixify_show_column_headers: true
+  matrixify_mode_columns: metrics
+  matrixify_dimension_selection_mode_columns: members
+  matrixify_dimension_columns:
+    dimension: ''
+    values: []
+  matrixify_topn_value_columns: 10
+  matrixify_topn_order_columns: desc
+  matrixify_show_row_labels: true
+  matrixify_mode_rows: metrics
+  matrixify_dimension_selection_mode_rows: members
+  matrixify_dimension_rows:
+    dimension: ''
+    values: []
+  matrixify_topn_value_rows: 10
+  matrixify_topn_order_rows: desc
+  matrixify_row_height: 300
+  matrixify_fit_columns_dynamically: true
+  matrixify_charts_per_row: 3
+  query_mode: aggregate
+  groupby:
+  - team
+  time_grain_sqla: P1D
+  temporal_columns_lookup:
+    ts: true
+  metrics:
+  - avg_acs_median
+  - avg_acs_mean
+  - median_minus_mean
+  all_columns:
+  - ts
+  - team
+  - avg_acs
+  percent_metrics: []
+  adhoc_filters:
+  - expressionType: SIMPLE
+    subject: ts
+    operator: TEMPORAL_RANGE
+    comparator: No filter
+    clause: WHERE
+    sqlExpression: null
+    isExtra: false
+    isNew: false
+    datasourceWarning: false
+    filterOptionName: filter_pahzscnv7h_d1dco6paef
+  order_by_cols: []
+  order_desc: true
+  server_page_length: 10
+  row_limit: 1000
+  percent_metric_calculation: row_limit
+  table_timestamp_format: smart_date
+  allow_render_html: true
+  show_cell_bars: true
+  color_pn: true
+  comparison_color_scheme: Green
+  comparison_type: values
+  extra_form_data: {}
+  dashboards:
+  - 16
+query_context: '{"datasource":{"id":88,"type":"table"},"force":false,"queries":[{"filters":[{"col":"ts","op":"TEMPORAL_RANGE","val":"No
+  filter"}],"extras":{"time_grain_sqla":"P1D","having":"","where":""},"applied_time_extras":{},"columns":["team"],"metrics":["avg_acs_median","avg_acs_mean","median_minus_mean"],"orderby":[["avg_acs_median",false]],"annotation_layers":[],"row_limit":1000,"series_limit":0,"group_others_when_limit_reached":false,"order_desc":true,"url_params":{},"custom_params":{},"custom_form_data":{},"post_processing":[],"time_offsets":[]}],"form_data":{"datasource":"88__table","viz_type":"table","slice_id":706,"matrixify_show_column_headers":true,"matrixify_mode_columns":"metrics","matrixify_dimension_selection_mode_columns":"members","matrixify_dimension_columns":{"dimension":"","values":[]},"matrixify_topn_value_columns":10,"matrixify_topn_order_columns":"desc","matrixify_show_row_labels":true,"matrixify_mode_rows":"metrics","matrixify_dimension_selection_mode_rows":"members","matrixify_dimension_rows":{"dimension":"","values":[]},"matrixify_topn_value_rows":10,"matrixify_topn_order_rows":"desc","matrixify_row_height":300,"matrixify_fit_columns_dynamically":true,"matrixify_charts_per_row":3,"query_mode":"aggregate","groupby":["team"],"time_grain_sqla":"P1D","temporal_columns_lookup":{"ts":true},"metrics":["avg_acs_median","avg_acs_mean","median_minus_mean"],"all_columns":["ts","team","avg_acs"],"percent_metrics":[],"adhoc_filters":[{"expressionType":"SIMPLE","subject":"ts","operator":"TEMPORAL_RANGE","comparator":"No
+  filter","clause":"WHERE","sqlExpression":null,"isExtra":false,"isNew":false,"datasourceWarning":false,"filterOptionName":"filter_pahzscnv7h_d1dco6paef"}],"order_by_cols":[],"order_desc":true,"server_page_length":10,"row_limit":1000,"percent_metric_calculation":"row_limit","table_timestamp_format":"smart_date","allow_render_html":true,"show_cell_bars":true,"color_pn":true,"comparison_color_scheme":"Green","comparison_type":"values","extra_form_data":{},"dashboards":[16],"force":false,"result_format":"json","result_type":"full"},"result_format":"json","result_type":"full"}'
+cache_timeout: null
+uuid: 7704328a-a508-497d-aaff-1d6820b9df60
+version: 1.0.0
+dataset_uuid: 8c097cfc-d9a3-46e4-a680-9b90c3af184a
