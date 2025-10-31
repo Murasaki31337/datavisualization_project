@@ -1,0 +1,118 @@
+# ===============================================
+# Custom PostgreSQL Exporter Queries (Database Dashboard)
+# ===============================================
+
+# --- Query 1: Active connections ---
+pg_active_connections:
+  query: "SELECT COUNT(*) AS active_connections FROM pg_stat_activity WHERE state = 'active';"
+  metrics:
+    - active_connections:
+        usage: "GAUGE"
+        description: "Number of active client connections"
+
+# --- Query 2: Idle connections ---
+pg_idle_connections:
+  query: "SELECT COUNT(*) AS idle_connections FROM pg_stat_activity WHERE state = 'idle';"
+  metrics:
+    - idle_connections:
+        usage: "GAUGE"
+        description: "Number of idle client connections"
+
+# --- Query 3: Total connections ---
+pg_total_connections:
+  query: "SELECT COUNT(*) AS total_connections FROM pg_stat_activity;"
+  metrics:
+    - total_connections:
+        usage: "GAUGE"
+        description: "Total number of database connections"
+
+# --- Query 4: Database size ---
+pg_database_size:
+  query: "SELECT datname, pg_database_size(datname) AS size_bytes FROM pg_database WHERE datistemplate = false;"
+  metrics:
+    - datname:
+        usage: "LABEL"
+        description: "Database name"
+    - size_bytes:
+        usage: "GAUGE"
+        description: "Database size in bytes"
+
+# --- Query 5: Query Processing Speed (QPS) ---
+pg_query_qps:
+  query: "SELECT datname, sum(xact_commit + xact_rollback) AS total_queries FROM pg_stat_database GROUP BY datname;"
+  metrics:
+    - datname:
+        usage: "LABEL"
+        description: "Database name"
+    - total_queries:
+        usage: "GAUGE"
+        description: "Total queries processed"
+
+# --- Query 6: Cache Hit Ratio ---
+pg_cache_hit_ratio:
+  query: |
+    SELECT datname,
+           (blks_hit::float / NULLIF(blks_hit + blks_read, 0)) * 100 AS cache_hit_ratio
+    FROM pg_stat_database
+    WHERE blks_hit + blks_read > 0;
+  metrics:
+    - datname:
+        usage: "LABEL"
+        description: "Database name"
+    - cache_hit_ratio:
+        usage: "GAUGE"
+        description: "Cache hit ratio in percent"
+
+# --- Query 7: Tuples inserted ---
+pg_tuples_inserted:
+  query: "SELECT datname, sum(tup_inserted) AS tuples_inserted FROM pg_stat_database GROUP BY datname;"
+  metrics:
+    - datname:
+        usage: "LABEL"
+        description: "Database name"
+    - tuples_inserted:
+        usage: "COUNTER"
+        description: "Number of tuples inserted"
+
+# --- Query 8: Tuples fetched vs returned ratio ---
+pg_tuple_ratio:
+  query: |
+    SELECT datname,
+           CASE WHEN sum(tup_returned) = 0 THEN 0
+                ELSE sum(tup_fetched)::float / sum(tup_returned)
+           END AS fetch_return_ratio
+    FROM pg_stat_database
+    GROUP BY datname;
+  metrics:
+    - datname:
+        usage: "LABEL"
+        description: "Database name"
+    - fetch_return_ratio:
+        usage: "GAUGE"
+        description: "Ratio of tuples fetched vs returned"
+
+# --- Query 9: Number of users with login privilege ---
+pg_user_privileges:
+  query: "SELECT COUNT(*) AS total_users FROM pg_roles WHERE rolcanlogin = true;"
+  metrics:
+    - total_users:
+        usage: "GAUGE"
+        description: "Number of database users with login privileges"
+
+# --- Query 10: Total number of tables and rows ---
+pg_table_info:
+  query: "SELECT current_database() AS datname, COUNT(*) AS table_count, SUM(n_live_tup) AS total_rows FROM pg_stat_user_tables;"
+  metrics:
+    - datname:
+        usage: "LABEL"
+        description: "Database name"
+    - table_count:
+        usage: "GAUGE"
+        description: "Total number of tables"
+    - total_rows:
+        usage: "GAUGE"
+        description: "Approx total number of live rows"
+
+# ===============================================
+# End of custom queries.yml
+# ===============================================
