@@ -48,42 +48,51 @@ print("Voxels:", len(voxel_grid.get_voxels()))
 print("Has colors:", pcd.has_colors())  # voxel grid itself has no color attr
 o3d.visualization.draw_geometries([voxel_grid], window_name="STEP 4")
 
-# --- Step 5: Add ground plane (aligned to model base) ---
+# --- Step 5: Vertical plane aligned with Step 6 cut ---
 bbox = mesh_crop.get_axis_aligned_bounding_box()
 min_bound = bbox.min_bound
 max_bound = bbox.max_bound
-
 width = max_bound[0] - min_bound[0]
 depth = max_bound[1] - min_bound[1]
-bottom_z = min_bound[2]
+height = max_bound[2] - min_bound[2]
 
+# We'll cut vertically along the X axis (middle of model)
+x0 = np.median(np.asarray(mesh_crop.vertices)[:, 0])
+
+# Create thin vertical box (plane)
 plane = o3d.geometry.TriangleMesh.create_box(
-    width=width * 1.2, height=0.01, depth=depth * 1.2
+    width=0.01,                # very thin → plane-like
+    height=height * 5,       # tall enough to cover full model
+    depth=depth * 0.8          # wide enough to span across model
 )
 plane.paint_uniform_color([0.3, 0.3, 0.3])
 
+# Move plane to center (x0) and align bottom with model base
 plane.translate([
-    min_bound[0] - 0.1 * width,    # shift X
-    min_bound[1] - 0.1 * depth,    # shift Y
-    bottom_z - 0.01                # shift Z just below base
+    x0 - 0.005,                # plane thickness offset
+    min_bound[1] - 0.1 * depth,
+    min_bound[2] - 0.1 * height
 ])
 
-print("\nSTEP 5: Plane + Mesh (aligned to base)")
+print("\nSTEP 5: Vertical Plane + Mesh (aligned for vertical cut)")
+print("Plane X position (x0):", x0)
 o3d.visualization.draw_geometries([mesh_crop, plane], window_name="STEP 5")
 
 
-# --- Step 6: Clipping (cut by median Z) ---
-z_values = np.asarray(mesh_crop.vertices)[:, 2]
-z0 = np.median(z_values)
-idx = np.where(z_values > z0)[0].tolist()
+# --- Step 6: Clipping (vertical cut along X axis) ---
+x_values = np.asarray(mesh_crop.vertices)[:, 0]
+x0 = np.median(x_values)
+idx = np.where(x_values > x0)[0].tolist()  # keep right side of model
 clipped_mesh = mesh_crop.select_by_index(idx)
 
-print("\nSTEP 6: Clipped Mesh")
+print("\nSTEP 6: Clipped Mesh (vertical cut)")
 print("Remaining vertices:", len(idx))
 print("Triangles:", len(clipped_mesh.triangles))
 print("Has colors:", clipped_mesh.has_vertex_colors())
 print("Has normals:", clipped_mesh.has_vertex_normals())
+
 o3d.visualization.draw_geometries([clipped_mesh], window_name="STEP 6")
+
 
 # --- Step 7: Color gradient + extreme points ---
 points = np.asarray(mesh_crop.vertices)
