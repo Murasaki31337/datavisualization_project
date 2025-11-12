@@ -48,25 +48,20 @@ print("Voxels:", len(voxel_grid.get_voxels()))
 print("Has colors:", pcd.has_colors())  # voxel grid itself has no color attr
 o3d.visualization.draw_geometries([voxel_grid], window_name="STEP 4")
 
-# --- Step 5: Add plane ---
 # --- Step 5: Add ground plane (aligned to model base) ---
-# Get model bounds
 bbox = mesh_crop.get_axis_aligned_bounding_box()
 min_bound = bbox.min_bound
 max_bound = bbox.max_bound
 
-# Compute width (x) and depth (y)
 width = max_bound[0] - min_bound[0]
 depth = max_bound[1] - min_bound[1]
 bottom_z = min_bound[2]
 
-# Create plane slightly larger than model
 plane = o3d.geometry.TriangleMesh.create_box(
     width=width * 1.2, height=0.01, depth=depth * 1.2
 )
 plane.paint_uniform_color([0.3, 0.3, 0.3])
 
-# Center plane under model
 plane.translate([
     min_bound[0] - 0.1 * width,    # shift X
     min_bound[1] - 0.1 * depth,    # shift Y
